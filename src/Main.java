@@ -77,6 +77,10 @@ public class Main extends JPanel {
         super.setPreferredSize(new Dimension(Board.CANVAS_WIDTH, Board.CANVAS_HEIGHT + 30));
         super.setBorder(BorderFactory.createLineBorder(COLOR_BG_STATUS, 2, false));
 
+        JButton hintButton = new JButton("Hint");
+        hintButton.addActionListener(e -> showHint());
+        this.add(hintButton, BorderLayout.PAGE_START); // Add button at the top
+
         initGame();
         newGame();
     }
@@ -154,6 +158,14 @@ public class Main extends JPanel {
             currentState = board.stepGame(aiSeed, move[0], move[1]);
         }
     }
+
+    private void showHint() {
+        if (currentState == State.PLAYING && currentMode == GameMode.PLAYER_VS_AI) {
+            int[] hintMove = aiPlayer.getHint(currentPlayer);
+            board.cells[hintMove[0]][hintMove[1]].paintHint(this.getGraphics());
+        }
+    }
+
 
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {

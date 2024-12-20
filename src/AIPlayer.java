@@ -36,7 +36,12 @@ public abstract class AIPlayer {
        this.mySeed = seed;
        oppSeed = (mySeed == Seed.CROSS) ? Seed.NOUGHT : Seed.CROSS;
     }
-  
+
+    public int[] getHint(Seed currentPlayer) {
+        int[] bestMove = move(); // Use existing AI move logic
+        return bestMove; // Return the row and column of the best move
+    }
+
     /** Abstract method to get next move. Return int[2] of {row, col} */
     abstract int[] move();  // to be implemented by subclasses
  }
