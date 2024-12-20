@@ -36,4 +36,11 @@ public class Cell {
             g.drawImage(content.getImage(), x1, y1, SEED_SIZE, SEED_SIZE, null);
         }
     }
+
+    public void paintHint(Graphics g) {
+        int x1 = col * SIZE;
+        int y1 = row * SIZE;
+        g.setColor(new Color(255, 255, 0, 128)); // Semi-transparent yellow
+        g.fillRect(x1, y1, SIZE, SIZE); // Draw hint overlay
+    }
 }
