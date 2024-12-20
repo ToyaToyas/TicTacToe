@@ -1,3 +1,12 @@
+/**
+ * ES234317-Algorithm and Data Structures
+ * Semester Ganjil, 2024/2025
+ * Group Capstone Project
+ * Group #1
+ * 1 - 5026221156 - Muhammad Ali Husain Ridwan
+ * 2 - 5026221157 - Muhammad Afaf
+ * 3 - 5026221162 - Raphael Andhika Pratama
+ */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -118,14 +127,14 @@ public class Main extends JPanel {
     public void chooseGameMode() {
         String[] options = {"Player vs Player", "Player vs AI (Minimax)", "Player vs AI (Table Lookup)"};
         int choice = JOptionPane.showOptionDialog(
-            this,
-            "Choose Game Mode:",
-            "Game Mode",
-            JOptionPane.DEFAULT_OPTION,
-            JOptionPane.INFORMATION_MESSAGE,
-            null,
-            options,
-            options[0]
+                this,
+                "Choose Game Mode:",
+                "Game Mode",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                options[0]
         );
 
         if (choice == 1) {

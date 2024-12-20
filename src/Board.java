@@ -1,3 +1,12 @@
+/**
+ * ES234317-Algorithm and Data Structures
+ * Semester Ganjil, 2024/2025
+ * Group Capstone Project
+ * Group #1
+ * 1 - 5026221156 - Muhammad Ali Husain Ridwan
+ * 2 - 5026221157 - Muhammad Afaf
+ * 3 - 5026221162 - Raphael Andhika Pratama
+ */
 import java.awt.*;
 /**
  * The Board class models the ROWS-by-COLS game board.
@@ -31,15 +40,6 @@ public class Board {
                 // Allocate element of the array
                 cells[row][col] = new Cell(row, col);
                 // Cells are initialized in the constructor
-            }
-        }
-    }
-
-    /** Reset the game board, ready for new game */
-    public void newGame() {
-        for (int row = 0; row < ROWS; ++row) {
-            for (int col = 0; col < COLS; ++col) {
-                cells[row][col].newGame(); // clear the cell content
             }
         }
     }
